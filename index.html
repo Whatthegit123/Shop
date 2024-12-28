@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNC Careers</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .header {        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 10px;  
+            width: 40%;
+        }
+
+        .menu-btn {
+            margin-right: 20px;
+            cursor: pointer;
+            font-size: 35px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            margin-top: 0px;
+            padding-top: 0px;          
+            border-radius: 8px;
+        }
+
+        .con {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #FFEFD5;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 8px;
+        }
+
+        .highlight {
+            color: #007bff;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button {
+            background-color: #20B2AA;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #008B8B;
+        }
+
+        .register-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .register-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #8B0000;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .section-content {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .line {
+            width: 100%;
+            height: 7px;
+            background-color: #00BFFF;
+            margin: 40px 0;
+        }
+        
+        .line2 {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            margin: 20px 0;
+        }
+
+        .sub-section {
+            margin: 20px 0;
+        }
+
+        .sub-section-title {
+            color: #343a40;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .sub-section-content {
+            color: #343a40;
+        }
+
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+
+        .testimonials-container {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .testimonials {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            animation: scroll 50s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .testimonial {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%; 
+    position: relative; 
+}
+
+.slides {
+    display: flex; 
+    transition: transform 0.5s ease; 
+    justify-content: center;
+}
+
+.slides img {
+    width: 60%;       
+    border-radius: 8px;
+    display: block;
+    border: 1px solid; 
+}
+
+
+        
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #FFFFE0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        } 
+        
+        .sidebar img {
+        padding-left: 50px;
+        width: 100px;
+        	
+        }
+
+
+ .welcome-message {
+    padding-left: 50px;
+    padding-bottom:50px;
+    font-weight: bold;
+}
+
+
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        .contact-info {
+            text-align: left;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .contact-info i {
+            margin-left: 10px;
+        }
+        .footer {
+            background-color: black;
+            color: white;         
+            padding:12px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+    	  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+        <img src="images/logo.jpg" alt="Logo" class="logo" width="50">
+        <div class="menu-btn" onclick="openNav()">&#9776;</div>
+    </div>
+
+    <div id="mySidebar" class="sidebar"> 
+    	<img src= "images/side.jpg">
+       <p class="welcome-message">Welcome Guest</p>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="apply.html">Apply Now</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="images/1.jpg" alt="Career Image">
+        </div>
+        <div class="highlight">Double Your Chances Of Getting The Right Job</div>
+        <div class="line"></div>
+        <div class="button-container">
+            <a href="apply.html" class="button">Apply Now </a>
+        </div>
+        <div class="line"></div>
+        
+        <div class="section">
+            <div class="section-title">Who We Are</div>
+            <div class="section-content">
+           <strong>     <p>Welcome to MNC CAREERS! </p> </strong>  
+
+<p>At MNC CAREERS, we are dedicated to offering exceptional remote job opportunities within our own company. We believe in the power of flexibility and work-life balance, and that’s why we provide rewarding work-from-home positions with competitive monthly salaries ranging from ₹40,000 to ₹60,000, tailored to your experience and qualifications </p>
+
+<p>As a Customer Executive with us, you’ll have the chance to represent some of the most renowned brands in the industry, including Zomato, Swiggy, Amazon, and Flipkart. Our team is committed to creating a dynamic and supportive work environment where you can thrive and grow.</p>
+
+<p>We provide all the tools and resources you need to succeed in your role. From comprehensive training programs to ongoing support, we ensure you have everything you need to excel.</p>
+
+<p>Join MNC CAREERS and take advantage of the flexibility of remote work while building a fulfilling career with a company that values your skills and dedication. Apply today and start your journey towards a rewarding professional future with us! </p>
+                      </div>
+        </div>
+    
+        <div class="section">            	
+            <div class="section-title">Our Services</div>
+            <div class="con">
+                <div class="sub-section">
+                    <div class="sub-section-title">Recruiter Corner</div>
+                    <div class="sub-section-content">
+                        <ul>
+                            <li>10000+ candidates register every month</li>
+                            <li>CV's of 1,50,000+ Searchable Resumes</li>
+                            <li>Various other Job Portals to fulfill the Client's Requirement precisely</li>
+                            <li>Top Companies hiring candidates through mnc-careers Jobs</li>
+                            <li>Many more services for Companies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="sub-section">
+                    <div class="sub-section-title">Candidates</div>
+                    <div class="sub-section-content">
+                        <p>Are you looking for the right career opportunity?</p>
+                        <p>Submit your resume:<br>E: cv@mnc-careers.net</p>
+                        <p><small>(Company's Mails will be ignored on this ID)</small></p>
+                    </div>
+                </div>
+                <div class="warning">BEWARE: Fraudulent recruitment activity</div>
+            </div>
+        </div><br>
+        <div class="section">
+            <div class="section-title">Testimonials</div>
+            <div class="testimonials-container">
+                <div class="testimonials">
+                                     
+                    
+                                                      <div class="testimonial">08-Jan-13</div>
+                                                   Had an outstanding experience with Infinity Recruitment Agency. My consultant Abhishek was extremely professional, helpful and kept me informed throughout the process. He understood the requirement well and really eased the joining with the new firm.
+                                                   Thank you so much. You are really one of the best recruitment agencies in gurugram.<br>
+                                                    <div class="testimonial-author">Himanshu Singhal</div>
+                                                    Manager - An IT Company<br><br>
+
+                                                    <div class="testimonial">05-Jan-13</div>
+                                                   We are in contract with Infinity Placement Services for more than 2 years. They are one of the best recruitment agencies in gurugram. Till now we didn't face any problem. They are helpful and provide replacement within time.<br>
+                                                    <div class="testimonial-author">Himanshu Singhal</div>
+                                                    Manager - An IT Company<br><br>
+
+                                                    <div class="testimonial">03-Nov-12</div>
+                                                   The teammates work at Infinity Placement Services are very positive, committed and suportive. Unlike other placement agencies in delhi or placement consultancy in delhi, Infinity Placement Services gives us prompt response everytime and provide us best available talent in the market. We really appriciate and recommend Infinity Jobs as best recruitment company to every employer as well as job applicants.<br>
+
+
+                                                    <div class="testimonial-author">Shibajeet Roy</div>
+                                                    General Manager - A leading Textile Company<br><br>
+
+                                                    <div class="testimonial">27-Oct-12</div>
+                                                   We have been working with Infintiy Placement Services for long. They understand our businesses and our requirements extremely well. They have dedicated teams to service all sectors like Retail, Hospitality, Media and Advertising, that are customer friendly and responsive which makes it best placement agencies in delhi ncr. We wish to nurture this relationship going forward.<br>
+                                                    <div class="testimonial-author">Ashok Bansal</div>
+                                                    Co-founder - MNF Industries<br><br>
+
+                                                    <div class="testimonial">18-Oct-12</div>
+                                                   During my search for job consultancy in delhi when I come to your website through google search I thought that you are also the one like other job consultancies in delhi but when I posted my resume and get contacted by your recruiter, I got to know that your employees are polite and supportive. They listen and understand Jobseeker's profile and guide them accordingly. Your team really helped me alot during my job hunting process. Hence, your agency is without a doubt one of the best job consultancy in delhi ncr. If somebody is looking for job or looking to hire talent whether in delhi, noida, grater noida, gurugram (gurgaon), ghaziabad or in faridabad I must recommend your name throughout my network.<br>
+                                                    <div class="testimonial-author">Vinod Singhal</div>
+                                                    Purchase Manager - A leading Fabric Manufacturing Company<br><br>
+
+                                                    <div class="testimonial">14-Oct-12</div>
+                                                   Every time I had a position to fill, the candidates put forward by Infinity Recruitement Consultancy Firm turned out to be the best for the job. I was particularly impressed by their Recruiters for not swamping me with CVs but only forwarding those of people who were likely to be a best fit. Some of the skills I needed to hire were hard to come by but Mr. Abhishek kept on proactively hunting for suitable candidates. Thanks a lot, Mr. Abhishek - You made my life so much easier on so many locations.<br>
+                                                    <div class="testimonial-author">Virendra Pratap Singh</div>
+                                                    IT Head - A leading Multinational IT Company<br><br>
+
+                                                    <div class="testimonial">17-Aug-12</div>
+                                                   Sonal, you are my angel, because of reaching out to me for this opportunity! I never ever had so intensively been consulted by any HR Firm / Recruitment Company. You are really doing your job great! Thank you so much Sonal and Infinity Placement Agency for that.<br>
+                                                    <div class="testimonial-author">Amika Malhotra</div>
+                                                    Operation Manager - AVC Industries Ltd.<br><br>
+
+                                                    <div class="testimonial">08-Jul-12</div>
+                                                    I'm very pleased to provide this letter of recommendation for Infinity Placement Services which is without any doubt a Best Recruitment Consultancy HR Firm in Noida (Delhi NCR) among all abc consultants. I have been consistently impressed with your HR Agency Firm�s attitude since the first day your Recruiter contacted me for a position in SEO Stretegy and Content Writing and Development. During the time that she has helped me with the recruitment process, I found your recruiters very friendly, intelligent and hard-working. Seeing that I was moving to Noida to start this new job, I did not have any Local Address proof, neither a place to live and your HR Recruiter was really interested and available to help me with everything to start the new job. I definitely recommend Infinity as a One of Top 10 Recruitment Consultants in Noida. I�m sure that her efficiency will help other candidates or jobseekers to find a good job in Noida Gurgaon and also to have this important support that I had.<br>
+                                                    <div class="testimonial-author">Rakesh Batra</div>
+                                                    Noida, Uttarpradesh, India<br><br>
+
+                                                    <div class="testimonial">26-Jun-12</div>
+                                                    I really would like to thank you for all your help and assistance with this and would like to say how professional I found your recruitment agency.
+                                                    Thanks again<br>
+                                                    <div class="testimonial-author">Pankaj Roy</div>
+                                                    Green Park Main, Delhi, India<br><br>
+
+                                                    <div class="testimonial">09-Apr-12</div>
+                                                    Many thanks for all your assistance over the past couple of months and best of luck with the company. You are without a doubt the best recruitment agency in Noida I have found and should I be jobhunting again in the future I would definitely employ your services. Well done!<br>
+                                                    Kindest regards and best wishes<br>
+                                                    <div class="testimonial-author">Sweta Sharma</div>
+                                                    Grater Noida, Uttarpradesh, India<br><br>
+
+                                                    <div class="testimonial">29-Mar-12</div>
+                                                    Thanks Mr. Vivek,<br>
+                                                    I'd also just like to thank you and your team - every time I have called up (and that was quite a few times!), I found every one of them helpful and superb to deal with.<br>
+                                                    Kind regards,<br>
+                                                    <div class="testimonial-author">CHRISTY</div>
+                                                    Sector 18, Noida, India<br><br>
+
+                                                    <div class="testimonial">19-Nov-11</div>
+                                                    We are pleased to work with Infinity Placement Services for our recruitment needs, they always give 100% in supplying us with permanent staff and they are always of the highest calibre. All of the team are extremely, professional in their manner and are always friendly and ready to help. That is why my teammates has given them place in the list of Best Recruitment firms in Noida and Delhi NCR in our internal database.<br>
+                                                    <div class="testimonial-author">Santosh Parashar</div>
+                                                    Recruitment Manager - R.S. (I) Pvt. Ltd.<br><br>
+
+                                                    <div class="testimonial">02-Nov-11</div>
+                                                    I must compliment you on the standards - it is the first time in 6 years that I can comfortably say that I have found an employment agency that responds quickly, and follows up when I'm slack in replying. You've got the right recipe!<br>
+                                                    Thanks,<br>
+                                                    <div class="testimonial-author">Rahul Roy</div>
+                                                    Karol Bagh, Delhi, India<br><br>
+
+                                                    <div class="testimonial">31-Oct-11</div>
+                                                    Their team of Placement Consultants in Noida have always been very efficient and helpful in assisting us with recruiting the right staff for our business.<br>
+                                                    With just one call we can have several interviews lined up, saving us valuable time.<br>
+                                                    <div class="testimonial-author">Jayne Frukel </div>
+                                                    Regional Director - R&amp;T Publications<br><br>
+
+                                                    <div class="testimonial">27-Sep-11</div>
+                                                    Thank you very, very much, I'm over the moon. You have been great and really helpful the whole way through in finding me a job!!<br>
+                                                    Thanks again<br>
+                                                    <div class="testimonial-author">Preeti Kashyap</div>
+                                                    Rohini, Delhi, India<br><br>
+
+                                                    <div class="testimonial">27-Sep-11</div>
+                                                    Hi Pratima,<br>
+                                                    I would just like to say Thank You very much for listening to the type of role I require and managing to find me one very quickly. I will be recommending yourself and your Placement Agency to any friends that feel they need a career change. Once again THANK YOU VERY VERY MUCH<br>
+                                                    Kind Regards<br>
+                                                    <div class="testimonial-author">Anupama Basu</div>
+                                                    Prashant Vihar, Delhi, India<br><br>
+
+                                                    <div class="testimonial">19-Sep-11</div>
+                                                    Sir, Thank you for your superb service, good luck with the new division, I will let you know if we need any more staff. Thanks again!<br>
+                                                    Kind Regards,<br>
+                                                    <div class="testimonial-author">Komal (P.A. to M.D.)</div>
+                                                    Sector 58, Noida, India<br><br>                                               
+            </div></div>
+        </div><br><br>
+        <div class="section">
+            <div class="section-title">Partners</div>
+            <div class="slider">
+                <div class="slides">
+                    <img src="slider/1.png" alt="Slide 1">
+                    <img src="slider/2.png" alt="Slide 2">
+                    <img src="slider/3.png" alt="Slide 3">
+                    <img src="slider/4.png" alt="Slide 4">
+                    <img src="slider/5.png" alt="Slide 5">
+                    <img src="slider/6.png" alt="Slide 6">
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="footer">
+    	<h1> MNC CAREERS</h1>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Hosur Road, Bengaluru - 560029, Karnataka, India</p>
+            <p><i class="fas fa-phone-alt"></i> Tel: +11 994012 9100</p>
+            <p><i class="fas fa-fax"></i> Fax: 40129000</p>
+            <p><i class="fas fa-envelope"></i> Email: mail@mmc-careers.net</p>
+            <p><i class="fas fa-globe"></i>  APP: MNC-CAREERS</p>
+        </div> 
+        
+        <div class="footer">
+        	<div class="line2"></div>
+            Copyright © All Rights reserved by MNC Careers 2024
+        </div>
+    </div>
+
+<script>
+    // Function to open the sidebar
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    // Function to close the sidebar
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+    }
+
+    // Function for image slider
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.querySelectorAll('.slides img');
+        
+        // Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        
+        // Increment slideIndex
+        slideIndex++;
+        
+        // Reset to the first slide if end reached
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        
+        // Display current slide
+        slides[slideIndex - 1].style.display = 'block';
+        
+        // Change slide every 2 seconds
+        setTimeout(showSlides, 2000); 
+    }
+</script>
+
+
+
+<script>
+    // Function to open the sidebar
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    // Function to close the sidebar
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+    }
+
+    // Function for image slider
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.querySelectorAll('.slides img');
+        
+        
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        
+        // Increment slideIndex
+        slideIndex++;
+        
+        // Reset to the first slide if end reached
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        
+        // Display current slide
+        slides[slideIndex - 1].style.display = 'block';
+        
+   
+        setTimeout(showSlides, 4000); 
+    }
+</script>
+
+
+</body>
+</html> 
+
+
+

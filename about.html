@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .header {        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 10px;  
+            width: 40%;
+        }
+
+        .menu-btn {
+            margin-right: 20px;
+            cursor: pointer;
+            font-size: 35px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            margin-top: 0px;
+            padding-top: 0px;                        
+        }
+    
+        .line2 {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            margin: 20px 0;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #FFFFE0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        } 
+        
+        .sidebar img {
+            padding-left: 50px;
+            width: 100px;
+        }
+
+        .welcome-message {
+            padding-left: 50px;
+            padding-bottom:50px;
+            font-weight: bold;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        } 
+        
+        h2 {
+            text-align: center;
+            color:maroon;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #333;
+            display: block; 
+        }
+
+    
+        .contact-info {
+            text-align: left;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .contact-info i {
+            margin-left: 10px;
+        }
+        
+        .footer {
+            background-color: black;
+            color: white;         
+            padding:12px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+         .container img{
+         width:300px;         
+         }
+         
+        
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        .loading-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .loading-container p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin: 0 auto 10px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <img src="images/logo.jpg" alt="Logo" class="logo" width="50">
+        <div class="menu-btn" onclick="openNav()">&#9776;</div>
+    </div>
+
+    <div id="mySidebar" class="sidebar"> 
+        <img src="images/side.jpg">
+        <p class="welcome-message">Welcome Guest</p>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="apply.html">Apply Now</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    
+    <div class="container">
+    <h2>INSTANT HIRING</h2> 
+    <img src="images/a1.jpg">
+    <p> If you are interested in looking for a job after degree, here is the chance to find yourself a job... Here you can find private jobs in the field. Be it mechanical engineering jobs, civil engineering jobs, electrical engineering jobs, biotechnology jobs, B.Tech jobs, MCA Jobs etc. Get the top Jobs for Graduates, with an extensive list of all graduate jobs online. MNC CAREERS is one of the Top job Recruitment Agencie  in India.
+</p>
+
+<h2>WHO ARE WE</h2> 
+
+
+<strong>     <p>Welcome to MNC CAREERS! </p> </strong>  
+
+<p>At MNC CAREERS, we are dedicated to offering exceptional remote job opportunities within our own company. We believe in the power of flexibility and work-life balance, and that’s why we provide rewarding work-from-home positions with competitive monthly salaries ranging from ₹40,000 to ₹60,000, tailored to your experience and qualifications </p>
+
+<p>As a Customer Executive with us, you’ll have the chance to represent some of the most renowned brands in the industry, including Zomato, Swiggy, Amazon, and Flipkart. Our team is committed to creating a dynamic and supportive work environment where you can thrive and grow.</p>
+
+<p>We provide all the tools and resources you need to succeed in your role. From comprehensive training programs to ongoing support, we ensure you have everything you need to excel.</p>
+
+<p>Join MNC CAREERS and take advantage of the flexibility of remote work while building a fulfilling career with a company that values your skills and dedication. Apply today and start your journey towards a rewarding professional future with us! </p>
+
+<img src="images/a2.jpg">
+    
+</div>
+    <div class="footer">
+        <h1>MNC CAREERS</h1>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Hosur Road, Bengaluru - 560029, Karnataka, India</p>
+            <p><i class="fas fa-phone-alt"></i> Tel: +11 994012 9100</p>
+            <p><i class="fas fa-fax"></i> Fax: 40129000</p>
+            <p><i class="fas fa-envelope"></i> Email: mail@mmc-careers.net</p>
+            <p><i class="fas fa-globe"></i> APP: MNC-CAREERS</p>
+        </div>
+        <div class="line2"></div>
+        <div>
+            Copyright © All Rights reserved by MNC Careers 2024
+        </div>
+    </div>
+
+    <script>
+        // Function to open the sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        // Function to close the sidebar
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        // Function to process UPI payment
+        function processUPIPayment() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            setTimeout(function() {
+                document.getElementById('loadingOverlay').style.display = 'none';
+                alert('UPI server down. Please try again.');
+            }, 3000); // 3 seconds delay
+        }
+    </script>
+</body>
+</html>

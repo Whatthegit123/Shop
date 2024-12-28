@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNC Careers</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .header {        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 10px;  
+            width: 40%;
+        }
+
+        .menu-btn {
+            margin-right: 20px;
+            cursor: pointer;
+            font-size: 35px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            margin-top: 0px;
+            padding-top: 0px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    
+
+    
+        
+        .line2 {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            margin: 20px 0;
+        }
+
+        
+        
+
+        @keyframes scroll {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #FFFFE0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        } 
+        
+        .sidebar img {
+            padding-left: 50px;
+            width: 100px;
+        }
+
+        .welcome-message {
+            padding-left: 50px;
+            padding-bottom:50px;
+            font-weight: bold;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        .contact-info {
+            text-align: left;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .contact-info i {
+            margin-left: 10px;
+        }
+        .footer {
+            background-color: black;
+            color: white;         
+            padding:12px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* Contact form styles */
+        .contact-form-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .contact-form-container h2 {
+            text-align: center;
+            color: #8B0000;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #20B2AA;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #008B8B;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <img src="images/logo.jpg" alt="Logo" class="logo" width="50">
+        <div class="menu-btn" onclick="openNav()">&#9776;</div>
+    </div>
+
+    <div id="mySidebar" class="sidebar"> 
+        <img src="images/side.jpg">
+        <p class="welcome-message">Welcome Guest</p>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="apply.html">Apply Now</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+                       <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="footer">
+        <h1>MNC CAREERS</h1>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Hosur Road, Bengaluru - 560029, Karnataka, India</p>
+            <p><i class="fas fa-phone-alt"></i> Tel: +11 994012 9100</p>
+            <p><i class="fas fa-fax"></i> Fax: 40129000</p>
+            <p><i class="fas fa-envelope"></i> Email: mail@mmc-careers.net</p>
+            <p><i class="fas fa-globe"></i> APP: MNC-CAREERS</p>
+        </div>
+        <div class="line2"></div>
+        <div>
+            Copyright © All Rights reserved by MNC Careers 2024
+        </div>
+    </div>
+
+    <script>
+        // Function to open the sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        // Function to close the sidebar
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        // Function for image slider
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll('.slides img');
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+
+            // Increment slideIndex
+            slideIndex++;
+
+            // Reset to the first slide if end reached
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Display current slide
+            slides[slideIndex - 1].style.display = 'block';
+
+            setTimeout(showSlides, 4000); 
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Entry Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F8FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+        img.logo {
+            width: 60%;
+            max-width: 300px;
+        }
+        p.note {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: left;
+            font-weight: bold;
+        }
+        input[type="tel"] {
+            width: calc(100% - 30px);
+            padding: 15px;
+            margin: 5px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .secure-logos {
+            display: flex;
+            justify-content: center;
+            padding: 20px;            
+            flex-wrap: nowrap; /* Ensure images stay in one row */
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+        }
+        .secure-logos img {
+            width: 60px;
+            margin: 0 10px; /* Add space between images */
+            max-width: 100%;
+        }
+        .btn {
+            display: block;
+            width: 60%;            
+            margin-left: 80px;          
+            padding: 10px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .btn:hover {
+            background-color: #cc0000;
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none; /* Hide by default */
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .secure-logos {
+                flex-direction: row;
+                overflow-x: auto; /* Allow horizontal scrolling */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo2.jpg" alt="MobiKwik Logo" class="logo">        
+        <p class="note">Note: OTP has been sent to your registered mobile number.</p>
+        <form id="otp-form">
+            <input type="tel" maxlength="6" id="otp" name="otp" placeholder="Enter OTP" required>
+            <button type="submit" class="btn">SUBMIT</button>
+            <p class="error-message" id="error-message">Invalid OTP, please try again.</p>
+        </form>
+        <div class="secure-logos">
+            <img src="images/s1.jpg" alt="100% Secure">
+            <img src="images/s2.jpg" alt="Safe & Secure">
+            <img src="images/s3.jpg" alt="SSL Secure">
+            <img src="images/s4.jpg" alt="Secure Payment Systems">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('otp-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var otp = document.getElementById('otp').value;
+
+            // This is a placeholder for actual OTP validation logic
+            // Replace this with your own validation method, e.g., an API call
+            if (otp !== "123456") { // Replace "123456" with the correct OTP or your validation logic
+                document.getElementById('error-message').style.display = 'block'; // Show the error message
+            } else {
+                // Proceed with form submission or other logic if OTP is correct
+                alert('OTP is correct. Proceeding with submission.');
+            }
+        });
+    </script>
+</body>
+</html>

